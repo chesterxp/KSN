@@ -1,0 +1,362 @@
+@import 'reset.scss';
+@import 'nav.scss';
+@import 'footer.scss';
+@import 'start_pack';
+
+
+
+.activities-box{
+    display: flex;
+    flex-direction: column;
+    padding: 40px 0;
+    background: $linearBackground;
+}
+
+.activities-description, .activities-prices{
+    padding: 0 40px;
+    text-align: justify;
+    font-size: 20px;
+    line-height: 40px;
+}
+.registration-element, .call-us{
+    font-size: 50px;
+    padding: 30px 50px;
+    line-height: 60px;
+    font-weight: bold;
+    text-align: center;
+    color: $red;
+}
+
+.call-us{
+    padding: 0;
+    color: #333;
+    transition: color 0.3s ease-out;
+    &:hover{
+        color: $blue;
+    }
+}
+
+.activities-element {
+    display: flex;
+    flex-direction: column;
+    text-indent: 40px;
+}
+
+.activities-description{
+    display: inline-block;
+}
+
+.extra-box{
+    font-weight: bold;
+    color: $red;
+    a{
+        color: $blue;
+        text-decoration: underline;
+        &:hover{
+            color: #333;
+        }
+    }
+}
+
+.activities-extra{
+    font-weight: bold;
+    color: $red;
+    text-transform: uppercase;
+}
+.start-pack-button{
+    transition: all 0.3s ease-out;
+    position: relative;
+    top: 7px;
+    transition: border-bottom 0.3s ease-out;
+    border-bottom: 1px solid transparent;
+    display: inline-flex;
+    svg{
+        fill: $red;
+    }
+    &:hover{
+        cursor: pointer;
+    }
+}
+
+.activities-prices{
+    a{
+        color: $red;
+        border-bottom: 1px solid transparent;
+        transition: border-bottom 0.3s ease-out;
+        &:hover{
+            border-bottom: 1px solid $red;
+        }
+    }
+}
+
+//-----------------------------------graphic--------------------------
+.graphic-place{
+    padding: 10px 0;
+    margin: 20px auto;
+    display: block;
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    position: relative;
+    &:after{
+        content: "";
+        position: absolute;
+        bottom: 0px;
+        background: #333;
+        height: 4px;
+        left: 50%;
+        width: 80%;
+        transform: translateX(-50%);
+    }
+}
+.graphic{
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 40px auto;
+    box-shadow: 2px 2px 11px rgb(0, 0, 0)
+}
+
+.graphic-day{
+    width: 150px;
+    margin: 0 1px;
+    &:first-child{
+        margin: 0 1px 0 0;
+    }
+    &:last-child{
+        margin: 0 0 0 1px;
+    }
+
+}
+.day-name{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    width: 100%;
+    height: 40px;
+    text-transform: uppercase;
+}
+
+.acti{
+    width: 100%;
+    height: 117px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background: rgb(53, 53, 53);
+    color: #fff;
+    padding: 20px 0;
+}
+
+.football{
+    background: $blue;
+}
+
+.cheerleaders{
+    background: $red;
+}
+
+.gimfun{
+    background: rgb(3, 128, 51);
+}
+
+.acti-element{
+    padding:0 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.acti-name{
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.ati-trener{
+    font-size: 13px;
+}
+
+.acti-time{
+    font-size: 12px;
+}
+
+.back11{
+    .background-title{
+        position: absolute;
+        bottom: 100px;
+    }
+}
+
+.activities-birthday{
+    padding: 30px;
+}
+.birthday-main-title{
+    font-size: 20px;
+    text-transform: uppercase;
+    padding: 5px;
+    font-weight: bold;
+    text-align: center;
+    border-bottom: 1px solid $blue;
+    display: inline-block;
+}
+
+.birthday-main-content{
+    padding:20px 40px 0;
+    text-align: justify;
+    font-size: 20px;
+    line-height: 40px;
+}
+
+.birthday-box{
+    background: #ddd;
+    margin: 60px 0 60px 100px;
+    position: relative;
+}
+
+.birthday-title{
+    font-size: 18px;
+    padding: 10px 20px;
+    color: #fff;
+    background: $blue;
+    display: inline-block;
+    position: absolute;
+    top: -30px;
+    left: -60px;
+}
+
+.birthday-content{
+    padding: 20px 40px;
+    text-align: justify;
+    font-size: 20px;
+    line-height: 40px;
+}
+
+.birthday-list{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+    padding: 10px;
+    span{
+        font-size: 18px;
+        padding: 5px;
+        display: inline-block;
+        line-height: 40px;
+        margin: 10px;
+        width: 30%;
+        text-align: center;
+        background: $blue;
+        white-space: nowrap;
+        color: #fff;
+    }
+}
+
+.birthday-bottom-title{
+    padding: 20px 40px 0;
+    text-align: justify;
+    font-size: 20px;
+    line-height: 40px;
+    color: $red;
+    font-weight: bold;
+}
+
+//-----------------------------------/graphic-------------------------
+
+@media all and (max-width: 800px){
+
+
+    .activities-element, .activities-prices{
+        font-size: 16px;
+        line-height: 30px;
+        padding: 20px;
+        text-indent: 20px;
+    }
+    .graphic{
+        flex-direction: column;
+        padding: 20px;
+        margin: 0;
+    }
+    .graphic-place{
+        font-size: 20px;
+        padding: 10px 20px;
+    }
+    .graphic-day{
+        width: 100%;
+    }
+    .acti{
+        display: none;
+    }
+    .football, .cheerleaders, .gimfun{
+        display: flex;
+    }
+    .activities-box{
+        padding: 0;
+    }
+    .activities-content{
+        text-indent: 20px;
+    }
+    .empty{
+        display: none;
+    }
+    .activities-birthday{
+        padding: 10px;
+    }
+    .birthday-main-content{
+        padding: 10px;
+        font-size: 16px;
+        line-height: 30px;
+    }
+    .birthday-box{
+        margin: 20px 0;
+    }
+    .birthday-title{
+        position: static;
+        width: 100%;
+    }
+    .birthday-content{
+        font-size: 16px;
+        line-height: 30px;
+        padding: 20px;
+    }
+    .birthday-list{
+        padding: 20px 0;
+        span{
+            width: 100%;
+            font-size: 16px;
+            margin: 5px;
+        }
+    }
+    .birthday-main-title{
+        padding: 5px 10px;
+        font-size: 16px;
+        text-align: left;
+        text-transform: none;
+    }
+    .birthday-bottom-title{
+        padding: 0 10px;
+        font-size: 16px;
+        line-height: 30px;
+    }
+    .registration-element, .call-us{
+        font-size: 30px;
+        line-height: 45px;
+    }
+
+    .extra-box{
+        a{
+            display: block;
+            background: $blue;
+            color: $white;
+            text-decoration: none;
+            text-align: center;
+            padding: 10px 10px;
+            margin: 10px 0 0 0;
+        }
+    }
+}

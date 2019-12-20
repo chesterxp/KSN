@@ -1,0 +1,131 @@
+@import 'reset.scss';
+@import 'nav.scss';
+@import 'footer.scss';
+
+
+.about-us__element {
+    position: relative;
+    width: 100%;
+}
+
+.about-us__content {
+    padding: 40px;
+    font-size: 20px;
+    line-height: 40px;
+    text-align: justify;
+    background: $linearBackground;
+    color: #222;
+    text-indent: 40px;
+}
+
+.about-us__content-top {
+    border-bottom: 1px solid $blue;
+    padding: 10px 20px;
+    font-size: 20px;
+    color: #333;
+    margin: 2px 0;
+    font-weight: bold;
+    text-indent: 0px;
+}
+
+.about-us__content-element {
+    text-indent: 0px;
+    padding: 10px 50px;
+    font-size: 20px;
+}
+
+//----------------------------------------------------------
+.about-us__crew-box {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.about-us__crew-person {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 23%;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.6);
+    margin: 30px 10px;
+}
+
+.about-us__person-image {
+    height: 350px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background: $red;
+
+    svg {
+        fill: #fff;
+    }
+
+    img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+.about-us__person-details {
+    flex: 1;
+    padding: 20px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.about-us__person-name {
+    font-weight: bold;
+    font-size: 22px;
+}
+
+.about-us__person-dyscipline {
+    font-size: 18px;
+}
+
+// .about-us__person-experience{
+//     font-size: 16px;
+//     margin-top: 20px;
+// }
+
+@media all and (max-width: 800px) {
+
+    .about-us__content {
+        font-size: 16px;
+        line-height: 30px;
+        padding: 20px;
+        text-indent: 20px;
+        text-align: left;
+    }
+
+    .about-us__content-top {
+        font-size: 16px;
+    }
+
+    .about-us__content-element {
+        padding: 10px 20px;
+        font-size: 17px;
+    }
+
+    .about-us__crew-person {
+        width: 80%;
+    }
+
+    .about-us__person-image {
+        height: 300px;
+
+        img {
+            top: -150px;
+            position: relative;
+        }
+    }
+
+    // .about-us__person-experience{
+    //     line-height: 30px;
+    // }
+}

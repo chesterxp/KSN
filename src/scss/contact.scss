@@ -1,0 +1,157 @@
+@import 'reset.scss';
+@import 'nav.scss';
+@import 'footer.scss';
+@import 'colors.scss';
+
+
+body{
+    background: $linearBackground;
+}
+.contact-side{
+    max-width: 1220px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+.contact-title{
+    font-size: 24px;
+    line-height: 34px;
+    text-align: center;
+    padding: 40px 0 20px;
+    font-weight: bold;
+    width: 100%;
+}
+
+.contact-bottom{
+    display: flex;
+}
+
+.contact-details, form{
+    flex: 1;
+}
+.contact-details{
+    padding: 20px 30px;
+    width: 500px;
+}
+.contact_box{
+    display: flex;
+    align-items: center;
+    color: $black;
+    width: 400px;
+    padding: 10px 0;
+    margin: 10px auto;
+    background: rgba(0, 0, 0, 0.05);
+    position: relative;
+    min-height: 80px;
+    border-radius: 5px;
+}
+.icon{
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: $blue;
+    fill: $white;
+    position: absolute;
+    right: 40px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.data{
+    padding: 0 20px;
+}
+
+.data-top{
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.data-down{
+    a{
+        color: $black;
+        font-size: 16px;
+    }
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    padding: 30px;
+}
+
+input[type=text], textarea, input[type=email]{
+    height: 60px;
+    display: block;
+    width: 100%;
+    font-size: 18px;
+    padding: 10px 20px;
+    margin: 10px 0;
+    color: $black;
+    border: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.55);
+    background: rgba(255, 255, 255, 0.8);
+    font-family: 'Montserrat', sans-serif;
+    &:focus{
+        border: 2px solid $blue;
+        outline: none;
+    }
+}
+textarea{
+    min-height: 150px;
+}
+input[type=submit]{
+    background: $blue;
+    color: $white;
+    padding: 10px 30px;
+    display: inline-block;
+    margin: 0 auto;
+    border-radius: 3px;
+    border: 1px solid $blue;
+    transition: all 0.3s ease-out;
+    margin: 20px auto 0 auto;
+    &:hover{
+        background: $white;
+        color: $blue;
+        cursor: pointer;
+    }
+}
+
+
+@media all and (max-width: 800px){
+    .contact-side{
+        width: 100%;
+        max-width: 100%;
+    }
+    .contact-title{
+        padding: 40px 20px 0;
+    }
+    .contact-bottom{
+        flex-direction: column;
+    }
+    .contact-details{
+        width: 100%;
+    }
+    .contact_box{
+        width: 100%;
+        &:last-child{
+            .icon{
+                display: none;
+            }
+        }
+    }
+    .icon{
+        right: 4%;
+        width: 40px;
+        height: 40px;
+    }
+}
+
+@media all and (max-width: 320px){
+    .contact_box{
+        .icon{
+            display: none;
+        }
+    }
+}

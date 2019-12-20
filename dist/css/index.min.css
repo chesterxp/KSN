@@ -1,0 +1,209 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+a {
+  text-decoration: none; }
+
+body {
+  font-family: 'Montserrat', sans-serif; }
+
+.slider {
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(90deg, #f01111, #0562db); }
+
+.slider__button-box {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: absolute;
+  bottom: 50px;
+  right: 100px; }
+
+.slider__sign-up, .slider__find-out {
+  color: #fff;
+  padding: 10px 20px;
+  background: #222;
+  border-radius: 5px;
+  text-transform: uppercase;
+  margin: 0 10px;
+  transition: all 0.5s ease-out;
+  position: relative;
+  z-index: 2;
+  overflow: hidden; }
+  .slider__sign-up:hover, .slider__find-out:hover {
+    color: #222;
+    background: #fff;
+    cursor: pointer; }
+
+.slider-photo {
+  width: 100%;
+  height: 100%;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  display: none; }
+  .slider-photo.active {
+    display: block; }
+  .slider-photo.foto1 {
+    background-image: url(../images/slider1.jpg); }
+
+.slider-title {
+  display: table;
+  padding: 5px;
+  border-radius: 5px;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.205);
+  position: absolute;
+  bottom: 50px;
+  left: 100px;
+  font-size: 40px;
+  right: 50px;
+  text-transform: uppercase; }
+
+.section-title {
+  color: #333;
+  font-size: 40px;
+  font-weight: bold;
+  text-align: center;
+  padding: 20px 0;
+  text-transform: uppercase; }
+
+.activities-main-title {
+  color: #333;
+  font-size: 40px;
+  font-weight: bold;
+  text-align: center;
+  padding: 20px 0;
+  text-transform: uppercase; }
+
+.activities-box {
+  display: flex;
+  padding: 30px 0; }
+
+.activities-element {
+  flex: 1; }
+
+.activities-description, .activities-prices {
+  padding: 0 40px;
+  text-align: justify;
+  font-size: 20px;
+  line-height: 30px;
+  margin: 0 0 20px 0; }
+
+.activities-title {
+  font-size: 26px;
+  text-align: center;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 0 0 20px 0; }
+
+.activities-foto {
+  flex: 1; }
+  .activities-foto img {
+    width: 100%;
+    height: auto;
+    padding: 0 40px; }
+
+.activities-graphic-box {
+  display: flex;
+  flex-direction: column; }
+
+.activities-graphic__element {
+  display: flex; }
+
+.activities-graphic__day, .activities-graphic__time {
+  flex: 1;
+  padding: 10px 10px;
+  text-align: center;
+  border: 1px solid #ddd; }
+
+.activities-element {
+  display: flex;
+  flex-direction: column; }
+
+.activities-button {
+  text-align: center;
+  background: #3C5A99;
+  border: 1px solid #3C5A99;
+  color: #fff;
+  padding: 10px 30px;
+  border-radius: 3px;
+  display: inline-block;
+  transition: background, color 0.3s ease-out; }
+  .activities-button:hover {
+    background: #fff;
+    color: #3C5A99; }
+
+.start-pack-button {
+  background: #222;
+  color: #fff;
+  padding: 3px;
+  border-radius: 3px;
+  transition: all 0.3s ease-out;
+  border: 1px solid #222; }
+  .start-pack-button:hover {
+    background: #fff;
+    color: #222;
+    cursor: pointer; }
+
+.start-pack {
+  background: rgba(141, 141, 141, 0.692);
+  width: 90%;
+  margin: 20px auto;
+  border-radius: 3px;
+  padding: 0 0 30px 0;
+  box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.592); }
+
+.start-pack__products {
+  font-size: 30px;
+  text-align: center;
+  padding: 20px 0;
+  letter-spacing: 3px;
+  background: #333;
+  color: #fff; }
+
+.start-pack__start {
+  font-size: 22px;
+  text-align: center;
+  padding: 20px 0;
+  color: #ddd;
+  border-bottom: 1px solid #ddd;
+  width: 50%;
+  margin: 0 auto 30px; }
+
+.start-pack__element {
+  display: flex;
+  justify-content: center;
+  padding: 10px 0; }
+
+.start-pack__photo {
+  width: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fff; }
+
+.start-pack__details {
+  background: #dadada;
+  width: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around; }
+
+.start-pack__description {
+  padding: 0 30px;
+  font-size: 20px;
+  line-height: 24px; }
+
+.start-pack__price {
+  background: #333;
+  color: #fff;
+  padding: 10px 30px;
+  border-radius: 3px;
+  text-align: center;
+  width: 100px;
+  margin: 10px auto; }

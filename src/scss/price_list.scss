@@ -1,0 +1,134 @@
+@import 'reset.scss';
+@import 'nav.scss';
+@import 'footer.scss';
+@import 'start_pack.scss';
+
+
+.price-list{
+    width: 1100px;
+    margin: 10px auto;
+    padding: 40px 0;
+}
+.price-list__element{
+    margin: 5px 0;
+    background: rgba(8, 56, 114, 0.75);
+    color: #fff;
+    display: flex;
+    font-size: 18px;
+    padding: 20px 40px;
+    box-shadow: 2px 2px 2px rgba(34, 34, 34, 0.6);
+    height: 140px;
+}
+
+.price-list__name{
+    font-weight: bold;
+    width: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.price-list__name-extra{
+    display: block;
+    text-align: center;
+    font-size: 14px;
+}
+.price-list__price{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    width: 500px;
+}
+
+.price-list__price-one, .price-list__price-two{
+    padding: 3px 0;
+}
+
+.price-list__description{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+    padding: 0px 20px;
+    flex-direction: column;
+}
+
+.price-list__description-down{
+    font-size: 13px;
+    letter-spacing: 2px;
+    padding: 5px 0 0 0;
+    transition: color 0.3s ease-out;
+    color: $red;
+    font-weight: bold;
+    &:hover{
+        color: #fff;
+        cursor: pointer;
+    }
+}
+
+.price-list__icons{
+    width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    a{
+        position: relative;
+        &:hover{
+            svg{
+                fill: $red;
+            }
+            .price-list__icons-description{
+                opacity: 1;
+            }
+        }
+        .price-list__icons-description{
+            position: absolute;
+            left: 50%;
+            padding: 3px 6px;
+            transition: all 0.6s ease-out;
+            background: $red;
+            color: #fff;
+            font-size: 12px;
+            transform: translateX(-50%);
+            border-radius: 3px;
+            opacity: 1;
+            text-align: center;
+            opacity: 0;
+            z-index: 1;
+        }
+    }
+    svg{
+        transition: fill 0.3s ease-out;
+        fill: #fff;
+        margin: 0 10px;
+    }
+}
+
+@media all and (max-width: 800px){
+    .price-list{
+        width: 100%;
+        padding: 20px;
+    }
+    .price-list__element {
+        height: 100%;
+        flex-direction: column;
+        position: relative;
+        padding: 10px;
+        margin: 10px 0;
+    }
+    .price-list__name, .price-list__price, .price-list__description{
+        width: 100%;
+        display: block;
+        padding: 5px 0;
+        text-align: center;
+    }
+    .price-list__icons{
+        position: absolute;
+        top: 30px;
+        right: 0px;
+    }
+    .price-list__description-down{
+        padding: 5px 20px 0px;
+    }
+}

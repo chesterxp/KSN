@@ -1,0 +1,222 @@
+@import 'colors.scss';
+
+body{
+    padding: 50px 0 0 0;
+}
+.top-nav{
+    display: none;
+}
+nav{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    background: $blue;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    svg{
+        width: 17px;
+        height: 17px;
+        fill: #fff;
+    }
+}
+.nav-left, .nav-right{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+.nav-top-part{
+    height: 10px;
+    width: 100%;
+}
+.nav-low-part{
+    height: 37px;
+    width: 100%;
+}
+.nav-top-part{
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    width: 90%;
+}
+.nav-low-part{
+    display: flex;
+    a{
+        padding: 5px;
+        margin: 5px;
+        color: #fff;
+        text-transform: uppercase;
+        display: block;
+        font-size: 13px;
+        font-weight: bold;
+        line-height: 18px;
+        white-space: nowrap;
+        position: relative;
+        transition: color 0.3s ease-out;
+        &:hover:not(.active):not(.join){
+            color: $red;
+            svg{
+                fill: $red;
+            }
+        }
+        &.active{
+            font-weight: bold;
+            color: $red;
+            svg{
+                fill: $red;
+            }
+            &:hover{
+                cursor: default;
+            }
+        }
+        &.join{
+            background: $red;
+            color: $white;
+            transition: background 0.3s ease-out;
+            &:hover{
+                background: rgb(128, 0, 0);
+            }
+        }
+    }
+}
+.nav-left{
+    align-items: flex-end;
+    .nav-low-part{
+        justify-content: flex-end;
+    }
+}
+.nav-right{
+    align-items: flex-start;
+    .nav-low-part{
+        justify-content: flex-start;
+    }
+}
+.nav-center{
+    width: 70px;
+    height: 50px;
+    min-width: 70px;
+    img{
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media all and (max-width: 800px){
+    body{
+        padding: 70px 0 0 0;
+    }
+    .top-nav{
+        display: flex;
+        justify-content: space-between;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background: $blue;
+        height: 70px;
+        z-index: 10;
+        img{
+            position: relative;
+            width: 50px;
+            height: 50px;
+            top: 10px;
+            left: 10px;
+        }
+    }
+
+    nav{
+        display: flex;
+        flex-direction: column;
+        padding: 0 0 10px 0;
+        background: transparent;
+        transition: all 0.3s ease-out;
+        background: rgba(8, 56, 114, 0.8);
+        top: 70px;
+        opacity: 0;
+        transform: translateY(-600px);
+        &.show-menu{
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .nav-center, .nav-top-part{
+        display: none;
+    }
+
+    .nav-low-part{
+        flex-direction: column;
+        height: auto;
+        a{
+            font-size: 20px;
+            text-align: center;
+            padding: 10px;
+            &.join{
+                width: 200px;
+                margin: 0 auto;
+            }
+        }
+    }
+
+    .hamburger-menu{
+        width: 50px;
+        height: 50px;
+        position: relative;
+        top: 12px;
+        right: 15px;
+        transform: rotate(0deg);
+        transition: .5s ease-in-out;
+        cursor: pointer;
+        span{
+            display: block;
+            position: absolute;
+            height: 5px;
+            width: 100%;
+            background: #ffffff;
+            border-radius: 9px;
+            opacity: 1;
+            left: 0;
+            transform: rotate(0deg);
+            transition: .25s ease-in-out;
+            &:nth-child(1) {
+                top: 10px;
+            }
+            &:nth-child(2),
+            &:nth-child(3) {
+                top: 20px;
+            }
+            &:nth-child(4) {
+                top: 30px;
+            }
+        }
+        &.open{
+            span{
+                &:nth-child(1) {
+                    top: 18px;
+                    width: 0%;
+                    left: 50%;
+                }
+                &:nth-child(2) {
+                    transform: rotate(45deg);
+                }
+                &:nth-child(3) {
+                    transform: rotate(-45deg);
+                }
+                &:nth-child(4) {
+                    top: 18px;
+                    width: 0%;
+                    left: 50%;
+                }
+            }
+        }
+    }
+
+    footer{
+        .footer-top {
+            flex-direction: column;
+        }
+        .contact, .important-links, .social-media{
+            width: auto;
+        }
+        .footer-title{
+            font-size: 22px;
+        }
+    }
+}
