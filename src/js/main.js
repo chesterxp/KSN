@@ -434,6 +434,16 @@ let FootballSchool = {
             me.myObserver(animateElements, me.showElement, false, '-50px');
         }
 
+        me.changeYear();
+
+    },
+    changeYear: function(){
+        const currentYearBox = document.querySelector('.currentYear');
+        const currentYear = FootballSchool.getCurrentYear();
+        currentYearBox.innerHTML = currentYear ? currentYear : 2020;
+    },
+    getCurrentYear: function(){
+        return currentDate = new Date().getFullYear();
     },
     hideLoader: function() {
         let loader = document.querySelector('.loader-background');

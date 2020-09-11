@@ -209,10 +209,11 @@ nav{
     }
 
     footer{
+        padding: 10px 0;
         .footer-top {
             flex-direction: column;
         }
-        .contact, .important-links, .social-media{
+        .footer-box{
             width: auto;
         }
         .footer-title{
