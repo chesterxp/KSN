@@ -443,7 +443,7 @@ let FootballSchool = {
         currentYearBox.innerHTML = currentYear ? currentYear : 2020;
     },
     getCurrentYear: function(){
-        return currentDate = new Date().getFullYear();
+        return new Date().getFullYear();
     },
     hideLoader: function() {
         let loader = document.querySelector('.loader-background');
